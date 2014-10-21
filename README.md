@@ -25,3 +25,7 @@ The solution :
 A custom FullyHorizontalCollectionViewLayout. You can specify the nbColumns you want, or let it compute the number of columns in each page. For now it only works with constant itemSize.
 
 It may fits your needs, or not, but could be helpful !
+
+Demo:
+--
+![demo.gif](https://raw.githubusercontent.com/philippeauriach/fullyhorizontalcollectionview/master/demo.gif)
