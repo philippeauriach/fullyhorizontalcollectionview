@@ -27,8 +27,11 @@ static NSString * const reuseIdentifier = @"Cell";
     contents = mutableContents;
     
     FullyHorizontalFlowLayout *collectionViewLayout = [FullyHorizontalFlowLayout new];
-    collectionViewLayout.nbColumns = 5;
-    collectionViewLayout.nbLines = 3;
+    
+    collectionViewLayout.itemSize = CGSizeMake(195., 200.);
+    //collectionViewLayout.nbColumns = 5;
+    //collectionViewLayout.nbLines = 3;
+    
     [self.collectionView setCollectionViewLayout:collectionViewLayout];
     
     self.collectionView.pagingEnabled = YES;

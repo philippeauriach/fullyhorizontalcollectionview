@@ -13,21 +13,25 @@
 - (instancetype)init{
     self = [super init];
     if(self){
-        self.itemSize = CGSizeMake(195., 200.);
         self.scrollDirection = UICollectionViewScrollDirectionHorizontal;
+        self.nbColumns = -1;
+        self.nbLines = -1;
     }
     return self;
 }
 
 - (UICollectionViewLayoutAttributes *)layoutAttributesForItemAtIndexPath:(NSIndexPath *)indexPath{
-    NSInteger idxPage = (int)indexPath.row/(_nbColumns * _nbLines);
+    NSInteger nbColumns = self.nbColumns != -1 ? self.nbColumns : (int)(self.collectionView.frame.size.width / self.itemSize.width);
+    NSInteger nbLines = self.nbLines != -1 ? self.nbLines : (int)(self.collectionView.frame.size.height / self.itemSize.height);
     
-    NSInteger O = indexPath.row - (idxPage * _nbColumns * _nbLines);
+    NSInteger idxPage = (int)indexPath.row/(nbColumns * nbLines);
     
-    NSInteger xD = (int)(O / _nbColumns);
-    NSInteger yD = O % _nbColumns;
+    NSInteger O = indexPath.row - (idxPage * nbColumns * nbLines);
     
-    NSInteger D = xD + yD * _nbLines + idxPage * _nbColumns * _nbLines;
+    NSInteger xD = (int)(O / nbColumns);
+    NSInteger yD = O % nbColumns;
+    
+    NSInteger D = xD + yD * nbLines + idxPage * nbColumns * nbLines;
     
     NSIndexPath *fakeIndexPath = [NSIndexPath indexPathForItem:D inSection:indexPath.section];
     UICollectionViewLayoutAttributes *attributes = [super layoutAttributesForItemAtIndexPath:fakeIndexPath];
