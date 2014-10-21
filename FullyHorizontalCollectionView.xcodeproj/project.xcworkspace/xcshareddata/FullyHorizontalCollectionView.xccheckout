@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>79A68E0E-D92D-491A-9305-68B8BBEC2EB8</string>
+	<key>IDESourceControlProjectName</key>
+	<string>FullyHorizontalCollectionView</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>3001FD09CFF3B5992385B28D47A135F0B88854AF</key>
+		<string>https://github.com/philippeauriach/fullyhorizontalcollectionview.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>FullyHorizontalCollectionView.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>3001FD09CFF3B5992385B28D47A135F0B88854AF</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/philippeauriach/fullyhorizontalcollectionview.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>3001FD09CFF3B5992385B28D47A135F0B88854AF</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>3001FD09CFF3B5992385B28D47A135F0B88854AF</string>
+			<key>IDESourceControlWCCName</key>
+			<string>FullyHorizontalCollectionView</string>
+		</dict>
+	</array>
+</dict>
+</plist>
