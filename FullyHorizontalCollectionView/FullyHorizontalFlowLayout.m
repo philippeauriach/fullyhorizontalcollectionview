@@ -40,7 +40,7 @@
     return attributes;
 }
 
--(NSArray*)layoutAttributesForElementsInRect:(CGRect)rect
+- (NSArray*)layoutAttributesForElementsInRect:(CGRect)rect
 {
     CGFloat newX = MIN(0, rect.origin.x - rect.size.width/2);
     CGFloat newWidth = rect.size.width*2 + (rect.origin.x - newX);
@@ -48,16 +48,18 @@
     CGRect newRect = CGRectMake(newX, rect.origin.y, newWidth, rect.size.height);
     
     // Get all the attributes for the elements in the specified frame
-    NSArray *allAttributesInRect = [super layoutAttributesForElementsInRect:newRect];
+    NSArray *allAttributesInRect = [[NSArray alloc] initWithArray:[super layoutAttributesForElementsInRect:newRect] copyItems:YES];
     
     for (UICollectionViewLayoutAttributes *attr in allAttributesInRect) {
         UICollectionViewLayoutAttributes *newAttr = [self layoutAttributesForItemAtIndexPath:attr.indexPath];
+        
         attr.frame = newAttr.frame;
         attr.center = newAttr.center;
         attr.bounds = newAttr.bounds;
         attr.hidden = newAttr.hidden;
         attr.size = newAttr.size;
     }
+    
     return allAttributesInRect;
 }
 
